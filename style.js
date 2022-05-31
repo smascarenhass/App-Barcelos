@@ -11,8 +11,36 @@ export const styles = StyleSheet.create( {
     margin: 5,
   },
 
-  CarouselCards: {
-      
+  carousel: {
+      backgroundColor: 'orange',
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+
+  carouselImg:{
+    alignSelf: 'center',
+    width: 300,
+    height: 500,
+    borderRadius: 12,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+
+  carouselText: {
+    padding: 15,
+    color: '#FFF',
+    position: 'absolute',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+
+  // Buttons
+
+  ButtonPromotion:{
+    alignItems:'center',
+    backgroundColor: 'orange',
+    marginBottom: 5,
+    padding: 30,
+    borderRadius: 15,
   },
 
   // Header
@@ -22,5 +50,13 @@ export const styles = StyleSheet.create( {
     alignItems: 'center',
     justifyContent: 'space-around',
     flexDirection:'row',
+  },
+
+  // Main
+
+  main: {
+    alignItems:'center',
+    justifyContent:'center',
+    marginTop: 50,
   },
 });

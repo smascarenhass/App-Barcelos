@@ -20,7 +20,7 @@ const Home = () => {
 
     </View>
 
-    <View>
+    <View style={styles.main}>
       <CarouselCards/>
     </View>
 
