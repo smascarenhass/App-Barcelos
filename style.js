@@ -1,6 +1,12 @@
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create( {
+  //Position
+  center:{
+    alignItems:'center',
+    justifyContent:'center',
+  },
+
   //Components
   titulo:{
     fontWeight: 'bold',
@@ -12,7 +18,6 @@ export const styles = StyleSheet.create( {
   },
 
   carousel: {
-      backgroundColor: 'orange',
       alignItems: 'center',
       justifyContent: 'center',
   },
@@ -33,14 +38,19 @@ export const styles = StyleSheet.create( {
     fontSize: 30,
   },
 
+  CardsProducts:{
+    alignItems: 'center',
+    justifyContent:'center',
+    backgroundColor:'orange',
+    margin: 5,
+  },
+
   // Buttons
 
   ButtonPromotion:{
     alignItems:'center',
-    backgroundColor: 'orange',
-    marginBottom: 5,
-    padding: 30,
-    borderRadius: 15,
+    justifyContent: 'center',
+    margin: 25,
   },
 
   // Header

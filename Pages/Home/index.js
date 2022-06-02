@@ -1,28 +1,33 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Button, TouchableOpacity, Text } from 'react-native';
 import ButtonMarket from '../../Components/Buttons/ButtonMarket';
-import ButtonUser from '../../Components/Buttons/ButtonUser';
 import Titulo from '../../Components/Titulo';
 import { styles } from '../../style';
 import CarouselCards from './Components/CarouselCards';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 
-// import { Container } from './styles';
-
-const Home = () => {
+function Home ({navigation}){
   return <View>
 
       <View style={styles.header}>
 
       <ButtonMarket/>
       <Titulo/>
-      <ButtonUser/>
+      
+      <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
+          <Icon name='user' size={25} color='orange'/>
+      </TouchableOpacity>
 
     </View>
 
     <View style={styles.main}>
+      
+    <Button title='Promoção do dia' onPress={() => navigation.navigate('Promoção')}/>
+
       <CarouselCards/>
     </View>
+
 
   </View>
 }

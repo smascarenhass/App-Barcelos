@@ -1,7 +1,9 @@
 import React, {useRef, useState} from 'react';
-import { View, TouchableOpacity, Text,Image } from 'react-native';
+import { View, TouchableOpacity, Text, Image, Button } from 'react-native';
 import Carousel from 'react-native-snap-carousel'
 import { styles } from '../../../style'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 const CarouselCards = () => {
@@ -12,7 +14,7 @@ const CarouselCards = () => {
         {
           title: 'Frios',
           text: 'Promoção',
-          img: 'https://cdn.consumidormoderno.com.br/wp-content/uploads/2019/02/IMG_0350.jpg',
+          img: 'https://www.infovarejo.com.br/novo/wp-content/uploads/2017/08/Frios-e-latic%C3%ADnios-740x360-768x373.jpg',
         },
 
         {
@@ -26,12 +28,24 @@ const CarouselCards = () => {
           text: 'Promoção',
           img: 'https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2021/12/m-dias-branco-banner-noticias_70-anos-de-piraque_final-2-1.jpg?w=806&ssl=1',
         },
+
+        {
+          title: 'Padaria',
+          text: 'Promoção',
+          img: 'https://extra.globo.com/incoming/24145466-5af-086/w640h360-PROP/padaria_extra.jpg',
+        },
+
+        {
+          title: 'Bebidas',
+          text: 'Promoção',
+          img: 'https://labsnews.com/pt-br/wp-content/uploads/sites/5/2022/01/bebidas-800x400.jpg',
+        },
       ]);
 
-      const _renderItem = ({ item, index }) => {
+      const _renderItem = ({ item, index, navigation, }) => {
           return(
               <View style={{margin:10,}}>
-                <TouchableOpacity style={styles.carousel}>
+                <TouchableOpacity  style={styles.carousel}>
                 <Image style={styles.carouselImg} source={{uri: item.img}}/>
                 <Text style={styles.carouselText}>{item.title}</Text>
                 </TouchableOpacity>
@@ -41,14 +55,16 @@ const CarouselCards = () => {
 
   return (
     <View>
-        <Carousel
-        ref={carouselRef}
-        data={lista}
-        renderItem={_renderItem}
-        sliderWidth={500}
-        itemWidth={300}
-        inactiveSlideOpacity={0.5}
-        />
+        <TouchableOpacity>
+          <Carousel
+          ref={carouselRef}
+          data={lista}
+          renderItem={_renderItem}
+          sliderWidth={500}
+          itemWidth={300}
+          inactiveSlideOpacity={0.5}
+          />
+        </TouchableOpacity>
     </View>
   )
 }
