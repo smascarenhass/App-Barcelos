@@ -44,7 +44,7 @@ const CarouselCards = () => {
 
       const _renderItem = ({ item, index, navigation, }) => {
           return(
-              <View style={{margin:10,}}>
+              <View style={{margin:10, marginTop:50,}}>
                 <TouchableOpacity  style={styles.carousel}>
                 <Image style={styles.carouselImg} source={{uri: item.img}}/>
                 <Text style={styles.carouselText}>{item.title}</Text>

@@ -8,11 +8,14 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 
 function Home ({navigation}){
-  return <View>
+  return <View style={{backgroundColor:'black',}}>
 
       <View style={styles.header}>
 
-      <ButtonMarket/>
+          <TouchableOpacity onPress={() => navigation.navigate('Corredores')}>
+              <Icon name='shoppingcart' color='orange' size={25}/>
+        </TouchableOpacity>
+
       <Titulo/>
       
       <TouchableOpacity onPress={() => navigation.navigate('Perfil')}>
@@ -23,7 +26,7 @@ function Home ({navigation}){
 
     <View style={styles.main}>
       
-    <Button title='Promoção do dia' onPress={() => navigation.navigate('Promoção')}/>
+    <Button title='Promoções do dia' onPress={() => navigation.navigate('Promoções')}/>
 
       <CarouselCards/>
     </View>
