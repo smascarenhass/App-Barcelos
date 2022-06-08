@@ -6,7 +6,7 @@ import CardsProducts from '../../Components/CardsProducts';
 
 const Promotion = () => {
   return(
-    <ScrollView style={{flexDirection:'column',}}>
+    <ScrollView style={{flexDirection:'column', backgroundColor:'#14140F',}}>
       <View style={{flexDirection: 'row',}}>
         <CardsProducts name='Carne'  price='39,99'/>
         <CardsProducts name='Frango' price='27,89'/>

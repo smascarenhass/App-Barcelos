@@ -7,6 +7,8 @@ import Home from './Pages/Home';
 import Promotion from './Pages/Promotion';
 import User from './Pages/User';
 import Corredores from './Pages/Corredores';
+import Cadastro from './Pages/Cadastro';
+import Login from './Pages/Login';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +22,8 @@ function App() {
         <Stack.Screen name="Promoções" component={Promotion} />
         <Stack.Screen name="Perfil" component={User} />
         <Stack.Screen name="Corredores" component={Corredores} />
+        <Stack.Screen name="Cadastro" component={Cadastro}/>
+        <Stack.Screen name="Login" component={Login} />
 
       </Stack.Navigator>
     </NavigationContainer>

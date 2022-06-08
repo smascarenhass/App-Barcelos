@@ -43,6 +43,9 @@ export const styles = StyleSheet.create( {
     justifyContent:'center',
     backgroundColor:'orange',
     margin: 5,
+    borderWidth: 5,
+    borderColor: '#34675C',
+    borderRadius: 12,
   },
 
   // Buttons
@@ -68,5 +71,18 @@ export const styles = StyleSheet.create( {
     alignItems:'center',
     justifyContent:'center',
     marginTop: 50,
+  },
+
+  containerCadastro:{
+    flexDirection: 'column',
+    justifyContent:'space-around',
+    alignItems:'center',
+    marginTop: 200,
+    marginLeft: 50,
+    backgroundColor: '#053D38',
+    padding: 50,
+    borderColor: '#34675C',
+    borderRadius: 12,
+    borderWidth: 5,
   },
 });

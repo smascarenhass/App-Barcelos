@@ -9,11 +9,21 @@ const CardsProducts = (props) => {
   return(
     <ScrollView style={{flexDirection:'column',}}>
       <TouchableOpacity style={styles.CardsProducts}>
-        <Text>{props.name}</Text>
+        <Text
+        style={{
+          margin: 5,
+          fontWeight:'bold',
+        }}
+        >{props.name}</Text>
 
-        <Image style={{width:100, height: 100,}} source={{uri: 'https://imagenspng.com/wp-content/uploads/imagem-frango-no-prato-Imagem-png-com-fundo-removido-transparente-gratis-para-baixar-1536x807.png'}}/>
+        <Image style={{width:100, height: 100, margin: 5,}} source={{uri: 'https://imagenspng.com/wp-content/uploads/imagem-frango-no-prato-Imagem-png-com-fundo-removido-transparente-gratis-para-baixar-1536x807.png'}}/>
 
-        <Text>R${props.price}</Text>
+        <Text
+        style={{
+          margin: 5,
+          fontWeight:'500',
+        }}
+        >R${props.price}</Text>
       </TouchableOpacity>
     </ScrollView>
   )
